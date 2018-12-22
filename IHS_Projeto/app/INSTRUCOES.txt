@@ -1,0 +1,30 @@
+
+INSTRUÇÕES
+
+W pula,
+S atira,
+
+
+Todo obstáculo mata, usar W para pular.
+Todo inimigo mata, usar W para pular ou S para atirar e matar.
+
+V e F regulam velocidade dos inimigos.
+W e S regulam frequencia que os obstáculos aparecem.
+E e D regulam a frequencia que os monstros aparecem no obstaculo
+R w F regulam a frequencia com que os monstros atiram
+V desabilita ou habilita tiro dos monstros
+B ativa moto winterbells
+
+teclas Q W E R tornam o jogo mais difícil
+teclas A S D F tornam o jogo mais fácil
+
+Jogo inicia na velocidade  dos inimigos 2, máxima 3, minima 1
+Jogo inicia na frequencia de obstaculos 2, máxima 3, minima 1
+Jogo inicia na frequencia de monstros 2, máxima 3, minima 1
+Jogo inicia na frequencia de tiros 2, máxima 3, minima 1
+
+pontuação:
+Cada obstaculo passado gera 1, 2 ou 3 pontos, a depender da velocidade do jogo.
+Cada inimigo matado aumenta um obstáculo + combo na sua pontuação.
+Cada inimigo matado aumenta em um o número de combo.
+Cada bala soltada pelo inimigo que bate no obstáculo ou passa por vc aumenta seu combo de balas.

@@ -1,0 +1,38 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst pcihellocore.ledverde -pg 1 -lvl 2 -y 950
+preplace inst pcihellocore -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst pcihellocore.pcie_hard_ip_0.cal_blk_clk -pg 1
+preplace inst pcihellocore.pcie_hard_ip_0.reset_controller_internal -pg 1
+preplace inst pcihellocore.pcie_hard_ip_0.pcie_rstn_conduit -pg 1
+preplace inst pcihellocore.pcie_hard_ip_0.refclk_conduit -pg 1
+preplace inst pcihellocore.inport -pg 1 -lvl 2 -y 230
+preplace inst pcihellocore.hexport -pg 1 -lvl 2 -y 130
+preplace inst pcihellocore.ledvermelho -pg 1 -lvl 2 -y 850
+preplace inst pcihellocore.pcie_hard_ip_0.test_in_conduit -pg 1
+preplace inst pcihellocore.pcie_hard_ip_0.pcie_internal_hip -pg 1
+preplace inst pcihellocore.pcie_hard_ip_0.avalon_reset -pg 1
+preplace inst pcihellocore.pcie_hard_ip_0.avalon_clk -pg 1
+preplace inst pcihellocore.cool -pg 1 -lvl 2 -y 30
+preplace inst pcihellocore.pcie_hard_ip_0.pipe_interface_internal -pg 1
+preplace inst pcihellocore.button0 -pg 1 -lvl 2 -y 650
+preplace inst pcihellocore.pcie_hard_ip_0.altgx_internal -pg 1
+preplace inst pcihellocore.ledextra -pg 1 -lvl 2 -y 750
+preplace inst pcihellocore.pcie_hard_ip_0 -pg 1 -lvl 1 -y 240
+preplace netloc EXPORT<net_container>pcihellocore</net_container>(SLAVE)pcie_hard_ip_0.pcie_rstn,(SLAVE)pcihellocore.pcie_hard_ip_0_pcie_rstn) 1 0 1 NJ
+preplace netloc EXPORT<net_container>pcihellocore</net_container>(SLAVE)pcihellocore.pcie_hard_ip_0_tx_out,(SLAVE)pcie_hard_ip_0.tx_out) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>pcihellocore</net_container>(SLAVE)inport.clk,(SLAVE)ledverde.clk,(MASTER)pcie_hard_ip_0.pcie_core_clk,(SLAVE)pcie_hard_ip_0.cal_blk_clk,(SLAVE)hexport.clk,(SLAVE)pcie_hard_ip_0.fixedclk,(SLAVE)ledvermelho.clk,(SLAVE)ledextra.clk,(SLAVE)button0.clk,(SLAVE)cool.clk,(SLAVE)pcie_hard_ip_0.reconfig_gxbclk) 1 0 2 230 640 580
+preplace netloc EXPORT<net_container>pcihellocore</net_container>(SLAVE)inport.external_connection,(SLAVE)pcihellocore.inport_external_connection) 1 0 2 NJ 620 NJ
+preplace netloc EXPORT<net_container>pcihellocore</net_container>(SLAVE)pcihellocore.hexport_external_connection,(SLAVE)hexport.external_connection) 1 0 2 NJ 160 NJ
+preplace netloc EXPORT<net_container>pcihellocore</net_container>(SLAVE)pcihellocore.ledvermelho_external_connection,(SLAVE)ledvermelho.external_connection) 1 0 2 NJ 880 NJ
+preplace netloc EXPORT<net_container>pcihellocore</net_container>(SLAVE)pcihellocore.button0_external_connection,(SLAVE)button0.external_connection) 1 0 2 NJ 680 NJ
+preplace netloc EXPORT<net_container>pcihellocore</net_container>(SLAVE)pcihellocore.ledextra_external_connection,(SLAVE)ledextra.external_connection) 1 0 2 NJ 780 NJ
+preplace netloc EXPORT<net_container>pcihellocore</net_container>(SLAVE)cool.external_connection,(SLAVE)pcihellocore.cool_external_connection) 1 0 2 NJ 60 NJ
+preplace netloc FAN_OUT<net_container>pcihellocore</net_container>(SLAVE)ledverde.reset,(SLAVE)cool.reset,(SLAVE)inport.reset,(SLAVE)ledvermelho.reset,(MASTER)pcie_hard_ip_0.pcie_core_reset,(SLAVE)hexport.reset,(SLAVE)ledextra.reset,(SLAVE)button0.reset) 1 1 1 600
+preplace netloc EXPORT<net_container>pcihellocore</net_container>(SLAVE)pcie_hard_ip_0.rx_in,(SLAVE)pcihellocore.pcie_hard_ip_0_rx_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>pcihellocore</net_container>(SLAVE)pcie_hard_ip_0.refclk,(SLAVE)pcihellocore.pcie_hard_ip_0_refclk) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>pcihellocore</net_container>(SLAVE)pcie_hard_ip_0.cra,(SLAVE)ledvermelho.s1,(SLAVE)inport.s1,(MASTER)pcie_hard_ip_0.bar0,(SLAVE)cool.s1,(SLAVE)ledverde.s1,(SLAVE)ledextra.s1,(SLAVE)pcie_hard_ip_0.txs,(SLAVE)button0.s1,(SLAVE)hexport.s1) 1 0 2 250 660 560
+preplace netloc EXPORT<net_container>pcihellocore</net_container>(SLAVE)pcihellocore.pcie_hard_ip_0_powerdown,(SLAVE)pcie_hard_ip_0.powerdown) 1 0 1 NJ
+preplace netloc EXPORT<net_container>pcihellocore</net_container>(SLAVE)pcihellocore.ledverde_external_connection,(SLAVE)ledverde.external_connection) 1 0 2 NJ 980 NJ
+levelinfo -pg 1 0 200 810
+levelinfo -hier pcihellocore 210 380 650 800
